@@ -12,10 +12,10 @@ document.getElementById('btn-add-to-cart').addEventListener('click', () => {
   const quantity = getInputValueById('product-quantity');
   console.log(productName, quantity);
 
-  // display product on UI
+  //* display product on UI
   addProductToDisplay(productName, quantity);
 
-  // save product to localStorage
+  //* save product to localStorage
   saveProductToLocalStorage(productName, quantity);
 });
 
@@ -43,6 +43,7 @@ const saveProductToLocalStorage = (productName, quantity) => {
     name: productName,
     quantity: quantity,
   };
+  //* add product object to cart Array
   cart.push(product);
 
   //* save cart Array to local storage
